@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Aristide Gallard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+</head>
+
+<body>
+    <section class="hero" id="top">
+        <div class="hero-content">
+            <h1>Aristide Gallard</h1>
+            <p class="subtitle">Web Developer / CS Student</p>
+            <p class="tagline">CS student building websites/apps and experimenting with AI in python.</p>
+        </div>
+        </div>
+
+        <img src="fusee.webp" alt="rocket" class="rocket" id="rocket" />
+    </section>
+
+    <section class="projects container" id="projects">
+        <h2>Projects</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>ARI Compression Tool</h3>
+                <p>Custom text encoding system using CSV-based character mapping and word compression.</p>
+                <span class="tech">Go • CSV</span>
+                <a href="https://github.com/Aristide-Gallard/file_extension" class="btn">View</a>
+            </div>
+
+            <div class="card">
+                <h3>Project Two</h3>
+                <p>I need to add my project here.</p>
+                <span class="tech"></span>
+                <a href="#" class="btn">View</a>
+            </div>
+
+            <div class="card">
+                <h3>Project Three</h3>
+                <p>Another project that I need to present.</p>
+                <span class="tech"></span>
+                <a href="#" class="btn">View</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills container" id="skills">
+        <h2>Skills</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Programming</h3>
+                <p>Python, C, C#, Java, Go, VBScript</p>
+            </div>
+
+            <div class="card">
+                <h3>Systems & DevOps</h3>
+                <p>Linux, Docker, Windows Server, Active Directory</p>
+            </div>
+
+            <div class="card">
+                <h3>Web development</h3>
+                <p>JavaScript, Node.js, HTML, CSS, Bootstrap, PHP</p>
+            </div>
+
+            <div class="card">
+                <h3>Databases</h3>
+                <p>SQL, SQL Server, NoSQL, MCD</p>
+            </div>
+
+            <div class="card">
+                <h3>Dev Tools & Collaboration</h3>
+                <p>Git, GitHub, Trello, Postman, GanttProject, VSCode</p>
+            </div>
+
+            <div class="card">
+                <h3>Security Tools</h3>
+                <p>Burp, Cisco Packet Tracer, Wireshark</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact container" id="contact">
+        <h2>Where to find me</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Contact</h3>
+                <a href="mailto:aristidegallard@gmail.com">aristidegallard@gmail.com</a>
+                <a href="http://t.me/Cosmicstack" target="_blank" rel="">t.me/Cosmicstack</a>
+                <p>Open to internships / freelance / collaboration</p>
+            </div>
+
+            <div class="card">
+                <h3>Socials</h3>
+                <p>
+                    <a href="https://github.com/Aristide-Gallard" target="_blank">GitHub</a><br>
+                    <a href="https://www.linkedin.com/in/aristide-gallard-6a4209290/" target="_blank">LinkedIn</a><br>
+                    <a href="CV_Aristide_Gallard.pdf" target="_blank">CV</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>©cosmicstack</p>
+    </footer>
+
+    <script>
+        const rocket = document.getElementById("rocket");
+
+        rocket.addEventListener("click", () => {
+            document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+        });
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+            const heroContent = document.querySelector(".hero-content");
+            const rocket = document.querySelector(".rocket");
+
+            heroContent.style.opacity = 1 - scrollY / 500;
+
+            heroContent.style.transform = `translateY(${scrollY * 0.3}px)`;
+            rocket.style.transform = `translate(-50%, ${scrollY * 0.5}px)`;
+
+            heroContent.style.filter = `blur(${scrollY / 200}px)`;
+        });
+    </script>
+
+</body>
+
+</html>
